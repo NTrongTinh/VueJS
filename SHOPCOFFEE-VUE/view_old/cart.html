@@ -1,0 +1,144 @@
+<template>
+  <script type="text/javascript">
+    function chonsize(a) {
+        document.getElementById("size").value = a;
+    }
+</script>
+<div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+            <h4 class="font-weight-bold text-center" style="color: red;">CHI TIẾT SẢN PHẨM</h4>
+        </div>
+    </div>
+</div>
+<article class="col-12">
+    <div class="container-fliud">
+        <div class="wrapper row">
+            <div class="row">
+                <div class="tab-content col-lg-6">
+                    <img src="Content\imgCOFFEE\..." class="img-fluid" alt="">
+                    <div class="container">
+                        <div class="container">
+                            <div class="container">
+                                <div class="container">
+                                    <ul class="preview-thumbnail nav nav-tabs"><h4><b>Mô tả</b></h4></ul>
+                                    <span style="font-size:16px;">...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="details col-lg-6">
+                    <h3 class="font-weight-bold mt-5 mb-3">Tên sản phẩm</h3>
+                    <div class="stars mb-2"> 
+                        <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span></span> <span class="fa fa-star"></span>
+                    </div>
+                    <span class="font-weight-bold">
+                        <span class="price" style="font-size:18px;">Giá bán:</span>
+                        <input type="text" id='giagoc' value='...' hidden>
+                        <input type="text" id='gia' value='...' hidden>
+                        <input type="text" name="thanhtien" id="htgiaT" hidden>
+                        <input type="text" name="thanhtiengoc" id="htgiagocT" hidden>
+                        <font id="htgia" style="font-size:20px;" class='ml-1 mt-5 ' color="red">Giá hiển thị</font>
+                        <strike id='htgiagoc' style="font-size:20px;">Giá gốc</strike>
+                    </span>
+                    <h5 class="colors font-weight-bold">
+                        <div style="padding-bottom: 10px;padding-top: 15px;font-size:15px;">Size:</div>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <span class="btn-group-toggle">
+                                <label
+                                    onclick='review("S")' 
+                                    class="btn btn-info mr-2 mb-4 active"
+                                    style="width:140px;height:44px;"
+                                >
+                                    <input 
+                                        type="radio"
+                                        name="sizee" 
+                                        autocomplete="off"
+                                        value="S"
+                                    >
+                                    <div style="font-size:15px;padding-top: 4px;">S + 0 vnđ</div>
+                                </label>
+                            </span>
+                            <span class="btn-group-toggle">
+                                <label
+                                    onclick='review("M")' 
+                                    class="btn btn-info mr-2 mb-4"
+                                    style="width:140px;height:44px;"
+                                >
+                                    <input 
+                                        type="radio"
+                                        name="sizee" 
+                                        autocomplete="off"
+                                        value="M"
+                                    >
+                                    <div style="font-size:15px;padding-top: 4px;">M + 6.000 vnđ</div>
+                                </label>
+                            </span>
+                            <span class="btn-group-toggle">
+                                <label
+                                    onclick='review("L")' 
+                                    class="btn btn-info mr-2 mb-4"
+                                    style="width:140px;height:44px;"
+                                >
+                                    <input 
+                                        type="radio"
+                                        name="sizee" 
+                                        autocomplete="off"
+                                        value="L"
+                                    >
+                                    <div style="font-size:15px;padding-top: 4px;">L + 10.000 vnđ</div>
+                                </label>
+                            </span>
+                        </div>
+                        <div style="padding-bottom: 10px;font-size:15px;">Topping:</div>
+                        <span class="btn-group-toggle " data-toggle="buttons" >
+                            <label class="mb-2 btn btn-info" style="height:44px;">
+                                <input type="checkbox" id="1" autocomplete="off" name="1">
+                                <div style="font-size:15px;padding-top: 4px;padding-right: 4px;padding-left: 4px;">Topping 1</div>
+                            </label>
+                        </span>
+                        <!-- Các topping khác tương tự -->
+                        <div style="padding-bottom: 10px;padding-top: 15px;font-size:15px;">Số Lượng:</div>
+                        <input class="form-control font-weight-bold" style="width:90px;height:30px; font-size:13px;" type="number" id="soluong" name="soluong" 
+                        min="1" max="100" value="1" size="10" />
+                        <div class="action">
+                            <button class="add-to-cart btn btn-info mt-3" style="height:50px;" type="submit" data-toggle="modal" data-target="#myModal">
+                                <div style="font-size:15px;padding-right: 4px;padding-left: 4px;">
+                                    <b>Thêm vào giỏ hàng</b>
+                                </div>
+                            </button>
+                            <a href="#" target="_blank"> <button class="like btn btn-info mt-3" style="height:50px;" type="button"><span class="fa fa-heart ml-1 mr-1"></span></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</article>
+<div class="container">
+    <div class="container">
+        <div class="container">
+            <div class="container">
+                <div class="container">
+                    <br>
+                    <ul class="preview-thumbnail nav nav-tabs mb-3"><h4><b>Bình luận</b></h4></ul>
+                    <p class="float-left"><b> </b></p>
+                    <p>Vui lòng <a href='index.php?action=login' class='text-info'><b>đăng nhập</b></a> 
+                    hoặc <a href='index.php?action=registration' class='text-info'><b>đăng ký</b></a> để bình luận!</p>
+                    <br>
+                    <ul class="preview-thumbnail nav nav-tabs"><h4><b>Các bình luận</b></h4></ul>
+                    <p><a href='index.php?action=login' class='text-info'>Vinh Huỳnh</a> <span class="float-right">1:07 PM, 19/03/2021</span></p>
+                    <p style="margin-left: 15px;">Sản phẩm rất ngon, giá cả hợp lý!</p>
+                    <p><a href='index.php?action=login' class='text-info'>Hạnh Nguyễn</a> <span class="float-right">3:30 PM, 18/03/2021</span></p>
+                    <p style="margin-left: 15px;">Mình đã mua sản phẩm này và cảm thấy rất hài lòng!</p>
+                    <p><a href='index.php?action=login' class='text-info'>Thảo Trần</a> <span class="float-right">10:15 AM, 18/03/2021</span></p>
+                    <p style="margin-left: 15px;">Sản phẩm chất lượng, đáng giá tiền!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</template>
