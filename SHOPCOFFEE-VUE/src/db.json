@@ -1,0 +1,25 @@
+{
+    "products" :[
+        { "id": 1, "name": "Trà sữa trân châu", "category": "Trà sữa", "price": 25000, "image": "1.jpg", "topping": ["Trân châu", "Sữa đặc"] },
+        { "id": 2, "name": "Cà phê sữa đá", "category": "Cà phê", "price": 30000, "image": "2.jpg", "topping": ["Đá"] },
+        { "id": 3, "name": "Nước ép cam", "category": "Nước ép", "price": 20000, "image": "3.jpg", "topping": ["Không"] },
+        { "id": 4, "name": "Trà oolong", "category": "Trà", "price": 18000, "image": "4.jpg", "topping": ["Lá trà"] },
+        { "id": 5, "name": "Bia lager", "category": "Bia", "price": 35000, "image": "5.jpg", "topping": ["Bọt"] },
+        { "id": 6, "name": "Soda chanh xanh", "category": "Soda", "price": 22000, "image": "6.jpg", "topping": ["Chanh xanh", "Đá"] },
+        { "id": 7, "name": "Nước ngọt cola", "category": "Nước ngọt", "price": 15000, "image": "7.jpg", "topping": ["Không"] },
+        { "id": 8, "name": "Cacao nóng", "category": "Thức uống nóng", "price": 28000, "image": "8.jpg", "topping": ["Sô cô la", "Kem"] },
+        { "id": 9, "name": "Nước dừa tươi", "category": "Nước trái cây", "price": 30000, "image": "9.jpg", "topping": ["Nước dừa"] },
+        { "id": 10, "name": "Sinh tố dâu", "category": "Sinh tố", "price": 26000, "image": "10.jpg", "topping": ["Dâu", "Sữa chua"] },
+        { "id": 11, "name": "Bạc xỉu", "category": "Cà phê", "price": 25000, "image": "11.jpg", "topping": ["Nước đun", "Sữa"] },
+        { "id": 12, "name": "Trà đào", "category": "Trà", "price": 20000, "image": "12.jpg", "topping": ["Đào"] },
+        { "id": 13, "name": "Sinh tố bơ", "category": "Sinh tố", "price": 28000, "image": "13.jpg", "topping": ["Bơ", "Sữa chua"] },
+        { "id": 14, "name": "Nước mía", "category": "Nước ép", "price": 18000, "image": "14.jpg", "topping": ["Không"] },
+        { "id": 15, "name": "Trà xanh lọc", "category": "Trà", "price": 22000, "image": "15.jpg", "topping": ["Lá trà"] },
+        { "id": 16, "name": "Cà phê đen", "category": "Cà phê", "price": 25000, "image": "16.jpg", "topping": ["Không"] },
+        { "id": 17, "name": "Bia đen", "category": "Bia", "price": 38000, "image": "17.jpg", "topping": ["Bọt"] },
+        { "id": 18, "name": "Soda cam", "category": "Soda", "price": 20000, "image": "18.jpg", "topping": ["Cam", "Đá"] },
+        { "id": 19, "name": "Nước chanh muối", "category": "Nước ép", "price": 16000, "image": "19.jpg", "topping": ["Muối"] },
+        { "id": 20, "name": "Cà phê sữa nóng", "category": "Cà phê", "price": 28000, "image": "20.jpg", "topping": ["Sữa nóng"] }
+    ]
+    
+}
