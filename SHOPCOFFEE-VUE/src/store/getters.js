@@ -6,17 +6,13 @@ export default {
     search: state => state.search,
 
     filteredProducts: state => {
-        if (state.search.length==0) {
-            return state.products.slice(-8).reverse()
+        if (state.search.length === 0) {
+            return state.products.slice(-8).reverse();
+        } else {
+            const searchTerm = state.search.toLowerCase();
+            return state.products.filter(product => {
+                return product.name.toLowerCase().includes(searchTerm);
+            });
         }
-        return state.products.filter(product => {
-          // So sánh từng ký tự của tên sản phẩm với chuỗi tìm kiếm
-          for (let i = 0; i < state.search.length; i++) {
-            if (product.name.toLowerCase().charAt(i) !== state.search.toLowerCase().charAt(i)) {
-              return false;
-            }
-          }
-          return true;
-        });
-      }
+    }
 }
