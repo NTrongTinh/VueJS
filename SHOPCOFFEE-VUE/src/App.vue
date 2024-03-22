@@ -1,6 +1,8 @@
 <template>
   <HeaderPage/>
-  <router-view/>
+  <div class="container">
+      <router-view/>
+  </div>
   <FooterPage/>
 </template>
 <script>
@@ -47,8 +49,8 @@ text-align: center;
 color: black;
 }
 
-a:link{
 
+a:link{
 text-decoration: none;
 }
 
@@ -58,7 +60,7 @@ text-decoration: none;
 }
 
 a:hover{
-color: yellow;
+color: rgb(221, 91, 51);
 text-decoration: none;
 }
 

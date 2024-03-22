@@ -12,10 +12,10 @@ export default {
       throw error;
     }
   },
-  async getProduct() {
+  async getProductHome() {
     try {
       const response = await axios.get(`${BASE_URL}/products`);
-      return response.data;
+      return response.data.slice(-8);
     } catch (error) {
       console.error('Error fetching produts:', error);
       throw error;
@@ -60,5 +60,37 @@ export default {
       console.error(`Error deleting user with ID ${producId}:`, error);
       throw error;
     }
-  }
+  },
+
+  async getUser() {
+    try {
+      const response = await axios.get(`${BASE_URL}/users`);
+      const users = response.data;
+      return users;
+    } catch (error) {
+      console.error('Lỗi khi lấy thông tin người dùng:', error);
+      throw error;
+    }
+  },
+
+  async addUser(user) {
+    try {
+      const response = await axios.post(`${BASE_URL}/users`, user);
+      return response.data;
+    } catch (error) {
+      console.error('Error adding user:', error);
+      throw error;
+    }
+  },
+  async updateUser(userID, data) {
+    try {
+      const response = await axios.put(`${BASE_URL}/users/${userID}`, data);
+      return response.data;
+    } catch (error) {
+      console.error(`Error updating user with ID ${userID}:`, error);
+      throw error;
+    }
+  },
+  
+  
 };

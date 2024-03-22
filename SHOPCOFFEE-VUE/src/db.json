@@ -1,25 +1,454 @@
 {
-    "products" :[
-        { "id": 1, "name": "Trà sữa trân châu", "category": "Trà sữa", "price": 25000, "image": "1.jpg", "topping": ["Trân châu", "Sữa đặc"] },
-        { "id": 2, "name": "Cà phê sữa đá", "category": "Cà phê", "price": 30000, "image": "2.jpg", "topping": ["Đá"] },
-        { "id": 3, "name": "Nước ép cam", "category": "Nước ép", "price": 20000, "image": "3.jpg", "topping": ["Không"] },
-        { "id": 4, "name": "Trà oolong", "category": "Trà", "price": 18000, "image": "4.jpg", "topping": ["Lá trà"] },
-        { "id": 5, "name": "Bia lager", "category": "Bia", "price": 35000, "image": "5.jpg", "topping": ["Bọt"] },
-        { "id": 6, "name": "Soda chanh xanh", "category": "Soda", "price": 22000, "image": "6.jpg", "topping": ["Chanh xanh", "Đá"] },
-        { "id": 7, "name": "Nước ngọt cola", "category": "Nước ngọt", "price": 15000, "image": "7.jpg", "topping": ["Không"] },
-        { "id": 8, "name": "Cacao nóng", "category": "Thức uống nóng", "price": 28000, "image": "8.jpg", "topping": ["Sô cô la", "Kem"] },
-        { "id": 9, "name": "Nước dừa tươi", "category": "Nước trái cây", "price": 30000, "image": "9.jpg", "topping": ["Nước dừa"] },
-        { "id": 10, "name": "Sinh tố dâu", "category": "Sinh tố", "price": 26000, "image": "10.jpg", "topping": ["Dâu", "Sữa chua"] },
-        { "id": 11, "name": "Bạc xỉu", "category": "Cà phê", "price": 25000, "image": "11.jpg", "topping": ["Nước đun", "Sữa"] },
-        { "id": 12, "name": "Trà đào", "category": "Trà", "price": 20000, "image": "12.jpg", "topping": ["Đào"] },
-        { "id": 13, "name": "Sinh tố bơ", "category": "Sinh tố", "price": 28000, "image": "13.jpg", "topping": ["Bơ", "Sữa chua"] },
-        { "id": 14, "name": "Nước mía", "category": "Nước ép", "price": 18000, "image": "14.jpg", "topping": ["Không"] },
-        { "id": 15, "name": "Trà xanh lọc", "category": "Trà", "price": 22000, "image": "15.jpg", "topping": ["Lá trà"] },
-        { "id": 16, "name": "Cà phê đen", "category": "Cà phê", "price": 25000, "image": "16.jpg", "topping": ["Không"] },
-        { "id": 17, "name": "Bia đen", "category": "Bia", "price": 38000, "image": "17.jpg", "topping": ["Bọt"] },
-        { "id": 18, "name": "Soda cam", "category": "Soda", "price": 20000, "image": "18.jpg", "topping": ["Cam", "Đá"] },
-        { "id": 19, "name": "Nước chanh muối", "category": "Nước ép", "price": 16000, "image": "19.jpg", "topping": ["Muối"] },
-        { "id": 20, "name": "Cà phê sữa nóng", "category": "Cà phê", "price": 28000, "image": "20.jpg", "topping": ["Sữa nóng"] }
-    ]
-    
+  "products": [
+    {
+      "id": "1",
+      "name": "PHINDI CHOCO",
+      "favorite": false,
+      "description": "PhinDi Choco - Cà phê Phin thế hệ mới với chất Phin êm hơn, kết hợp cùng Choco ngọt tan mang đến hương vị mới lạ, không thể hấp dẫn hơn!",
+      "price": 45000,
+      "imageUrl": "1.jpg",
+      "cookTime": "5-10",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "PHINDI KEM SỮA",
+      "favorite": false,
+      "description": "PhinDi Kem Sữa - Cà phê Phin thế hệ mới với chất Phin êm hơn, kết hợp cùng Kem Sữa béo ngậy mang đến hương vị mới lạ, không thể hấp dẫn hơn!",
+      "price": 45000,
+      "imageUrl": "2.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "BẠC XỈU ĐÁ",
+      "favorite": false,
+      "description": "Nếu Phin Sữa Đá dành cho các bạn đam mê vị đậm đà, thì Bạc Xỉu Đá là một sự lựa chọn nhẹ 'đô' cà phê nhưng vẫn thơm ngon, chất lừ không kém!",
+      "price": 29000,
+      "imageUrl": "3.jpg",
+      "cookTime": "3-5",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "CARAMEL MACCHIATO",
+      "favorite": false,
+      "description": "Thỏa mãn cơn thèm ngọt! Ly cà phê Caramel Macchiato bắt đầu từ dòng sữa tươi và lớp bọt sữa béo ngậy, sau đó hòa quyện cùng cà phê espresso đậm đà và sốt caramel ngọt ngào. Thông qua bàn tay điêu luyện của các chuyên gia pha chế, mọi thứ hoàn toàn được nâng tầm thành nghệ thuật! Bạn có thể tùy thích lựa chọn uống nóng hoặc dùng chung với đá.",
+      "price": 69000,
+      "imageUrl": "4.jpg",
+      "cookTime": "5-10",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "MOCHA MACCHIATO",
+      "favorite": false,
+      "description": "Một thức uống yêu thích được kết hợp bởi giữa sốt sô cô la ngọt ngào, sữa tươi và đặc biệt là cà phê espresso đậm đà mang thương hiệu Highlands Coffee. Bạn có thể tùy thích lựa chọn uống nóng hoặc dùng chung với đá.",
+      "price": 69000,
+      "imageUrl": "5.jpg",
+      "cookTime": "3-5",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "LATTE",
+      "favorite": false,
+      "description": "Ly cà phê sữa ngọt ngào đến khó quên! Với một chút nhẹ nhàng hơn so với Cappuccino, Latte của chúng tôi bắt đầu với cà phê espresso, sau đó thêm sữa tươi và bọt sữa một cách đầy nghệ thuật. Bạn có thể tùy thích lựa chọn uống nóng hoặc dùng chung với đá.",
+      "price": 65000,
+      "imageUrl": "6.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "CLASSIC PHIN FREEZE",
+      "favorite": false,
+      "description": "Thơm ngon đậm đà! Được kết hợp từ cà phê pha Phin truyền thống chỉ có tại Highlands Coffee, cùng với thạch cà phê và đá xay mát lạnh. Trên cùng là lớp kem tươi thơm béo và bột ca cao đậm đà. Món nước hoàn hảo để khởi đầu câu chuyện cùng bạn bè.",
+      "price": 55000,
+      "imageUrl": "7.jpg",
+      "cookTime": "5-10",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "FREEZE QUẢ MỌNG ANH ĐÀO",
+      "favorite": false,
+      "description": "Freeze Quả Mọng Anh Đào với kem béo đậm đà, hài hòa cùng vị chua của quả mọng và cherry, thỏa mãn vị giác.",
+      "price": 59000,
+      "imageUrl": "8.jpg",
+      "cookTime": "3-5",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "FREEZE TRÀ XANH",
+      "favorite": false,
+      "description": "Thức uống rất được ưa chuộng! Trà xanh thượng hạng từ cao nguyên Việt Nam, kết hợp cùng đá xay, thạch trà dai dai, thơm ngon và một lớp kem dày phủ lên trên vô cùng hấp dẫn. Freeze Trà Xanh thơm ngon, mát lạnh, chinh phục bất cứ ai!",
+      "price": 55000,
+      "imageUrl": "9.jpg",
+      "cookTime": "3-5",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "COOKIES & CREAM",
+      "favorite": false,
+      "description": "Một thức uống ngon lạ miệng bởi sự kết hợp hoàn hảo giữa cookies sô cô la giòn xốp cùng hỗn hợp sữa tươi cùng sữa đặc đem say với đá viên, và cuối cùng không thể thiếu được chính là lớp kem whip mềm mịn cùng cookies sô cô la say nhuyễn.",
+      "price": 55000,
+      "imageUrl": "10.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "FREEZE SÔ-CÔ-LA",
+      "favorite": false,
+      "description": "Thiên đường đá xay sô cô la! Từ những thanh sô cô la Việt Nam chất lượng được đem xay với đá cho đến khi mềm mịn, sau đó thêm vào thạch sô cô la dai giòn, ở trên được phủ một lớp kem whip beo béo và sốt sô cô la ngọt ngào. Tạo thành Freeze Sô-cô-la ngon mê mẩn chinh phục bất kì ai!",
+      "price": 55000,
+      "imageUrl": "11.jpg",
+      "cookTime": "3-5",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "CARAMEL PHIN FREEZE",
+      "favorite": false,
+      "description": "Thơm ngon khó cưỡng! Được kết hợp từ cà phê truyền thống chỉ có tại Highlands Coffee, cùng với caramel, thạch cà phê và đá xay mát lạnh. Trên cùng là lớp kem tươi thơm béo và caramel ngọt ngào. Món nước phù hợp trong những cuộc gặp gỡ bạn bè, bởi sự ngọt ngào thường mang mọi người xích lại gần nhau.",
+      "price": 55000,
+      "imageUrl": "12.jpg",
+      "cookTime": "5-10",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "13",
+      "name": "TRÀ QUẢ MỌNG ANH ĐÀO",
+      "favorite": false,
+      "description": "Trà Quả Mọng Anh Đào là sự kết hợp giữa trà thơm cùng quả mọng chua ngọt, thêm đài quả ngâm giòn giòn, đánh tan cơn khát.",
+      "price": 59000,
+      "imageUrl": "13.jpg",
+      "cookTime": "3-5",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "14",
+      "name": "TRÀ SEN VÀNG (CỦ NĂNG)",
+      "favorite": false,
+      "description": "Thức uống chinh phục những thực khách khó tính! Sự kết hợp độc đáo giữa trà Ô long, hạt sen thơm bùi và củ năng giòn tan. Thêm vào chút sữa sẽ để vị thêm ngọt ngào.",
+      "price": 15000,
+      "imageUrl": "14.jpg",
+      "cookTime": "3-5",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "15",
+      "name": "TRÀ SEN VÀNG (SEN)",
+      "favorite": false,
+      "description": "Thức uống chinh phục những thực khách khó tính! Sự kết hợp độc đáo giữa trà Ô long, hạt sen thơm bùi và củ năng giòn tan. Thêm vào chút sữa sẽ để vị thêm ngọt ngào.",
+      "price": 45000,
+      "imageUrl": "15.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "16",
+      "name": "TRÀ XANH ĐẬU ĐỎ",
+      "favorite": false,
+      "description": "Thiên đường đá xay sô cô la! Từ những thanh sô cô la Việt Nam chất lượng được đem xay với đá cho đến khi mềm mịn, sau đó thêm vào thạch sô cô la dai giòn, ở trên được phủ một lớp kem whip beo béo và sốt sô cô la ngọt ngào. Tạo thành Freeze Sô-cô-la ngon mê mẩn chinh phục bất kì ai!",
+      "price": 45000,
+      "imageUrl": "16.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "17",
+      "name": "TRÀ THẠCH VẢI",
+      "favorite": false,
+      "description": "Một sự kết hợp thú vị giữa trà đen, những quả vải thơm ngon và thạch giòn khó cưỡng, mang đến thức uống tuyệt hảo!",
+      "price": 45000,
+      "imageUrl": "17.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "18",
+      "name": "TRÀ THẠCH ĐÀO",
+      "favorite": false,
+      "description": "Vị trà đậm đà kết hợp cùng những miếng đào thơm ngon mọng nước cùng thạch đào giòn dai. Thêm vào ít sữa để gia tăng vị béo.",
+      "price": 45000,
+      "imageUrl": "18.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "19",
+      "name": "CAPPUCCINO",
+      "favorite": false,
+      "description": "Ly cà phê sữa đậm đà thời thượng! Một chút đậm đà hơn so với Latte, Cappuccino của chúng tôi bắt đầu với cà phê espresso, sau đó thêm một lượng tương đương giữa sữa tươi và bọt sữa cho thật hấp dẫn. Bạn có thể tùy thích lựa chọn uống nóng hoặc dùng chung với đá.",
+      "price": 65000,
+      "imageUrl": "19.jpg",
+      "cookTime": "5-10",
+      "tags": [
+        "Sô-cô-la"
+      ]
+    },
+    {
+      "id": "20",
+      "name": "AMERICANO",
+      "favorite": false,
+      "description": "Americano tại Highlands Coffee là sự kết hợp giữa cà phê espresso thêm vào nước đun sôi. Bạn có thể tùy thích lựa chọn uống nóng hoặc dùng chung với đá.",
+      "price": 45000,
+      "imageUrl": "20.jpg",
+      "cookTime": "3-5",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "21",
+      "name": "ESPRESSO",
+      "favorite": false,
+      "description": "Đích thực là ly cà phê espresso ngon đậm đà! Được chiết xuất một cách hoàn hảo từ loại cà phê rang được phối trộn độc đáo từ những hạt cà phê Robusta và Arabica chất lượng hảo hạng.",
+      "price": 29000,
+      "imageUrl": "21.jpg",
+      "cookTime": "3-5",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "22",
+      "name": "PHIN SỮA ĐÁ",
+      "favorite": false,
+      "description": "Hương vị cà phê Việt Nam đích thực! Từng hạt cà phê hảo hạng được chọn bằng tay, phối trộn độc đáo giữa hạt Robusta từ cao nguyên Việt Nam, thêm Arabica thơm lừng. Cà phê được pha từ Phin truyền thống, hoà cùng sữa đặc sánh và thêm vào chút đá tạo nên ly Phin Sữa Đá – Đậm Đà Chất Phin.",
+      "price": 29000,
+      "imageUrl": "22.jpg",
+      "cookTime": "3-5",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "23",
+      "name": "PHIN SỮA ĐÁ",
+      "favorite": false,
+      "description": "Hương vị cà phê Việt Nam đích thực! Từng hạt cà phê hảo hạng được chọn bằng tay, phối trộn độc đáo giữa hạt Robusta từ cao nguyên Việt Nam, thêm Arabica thơm lừng. Cà phê được pha từ Phin truyền thống, hoà cùng sữa đặc sánh và thêm vào chút đá tạo nên ly Phin Sữa Đá – Đậm Đà Chất Phin.",
+      "price": 29000,
+      "imageUrl": "23.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Cà phê"
+      ]
+    },
+    {
+      "id": "24",
+      "name": "PHIN ĐEN NÓNG",
+      "favorite": false,
+      "description": "Dành cho những tín đồ cà phê đích thực! Hương vị cà phê truyền thống được phối trộn độc đáo tại Highlands. Cà phê đậm đà pha từ Phin, cho thêm 1 thìa đường, mang đến vị cà phê đậm đà chất Phin.",
+      "price": 29000,
+      "imageUrl": "24.jpg",
+      "cookTime": "3-5",
+      "tags": [
+        "Thức uống đá xay"
+      ]
+    },
+    {
+      "id": "25",
+      "name": "BÁNH MOUSSE CACAO",
+      "favorite": false,
+      "description": "Bánh Mousse Ca Cao, là sự kết hợp giữa ca-cao Việt Nam đậm đà cùng kem tươi.",
+      "price": 35000,
+      "imageUrl": "25.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Sinh tố"
+      ]
+    },
+    {
+      "id": "26",
+      "name": "BÁNH MOUSSE ĐÀO",
+      "favorite": false,
+      "description": "Một sự kết hợp khéo léo giữa kem và lớp bánh mềm, được phủ lên trên vài lát đào ngon tuyệt.",
+      "price": 35000,
+      "imageUrl": "26.jpg",
+      "cookTime": "3-5",
+      "tags": [
+        "Sinh tố"
+      ]
+    },
+    {
+      "id": "27",
+      "name": "BÁNH SÔ-CÔ-LA HIGHLANDS",
+      "favorite": false,
+      "description": "Một chiếc bánh độc đáo! Sô cô la ngọt ngào và kem tươi béo ngậy, được phủ thêm một lớp sô cô la mỏng bên trên cho thêm phần hấp dẫn.",
+      "price": 35000,
+      "imageUrl": "27.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Sinh tố"
+      ]
+    },
+    {
+      "id": "28",
+      "name": "BÁNH PHÔ MAI CÀ PHÊ",
+      "favorite": false,
+      "description": "Làm từ cà phê truyền thống của Highlands, kết hợp với phô mai thơm ngon! Chiếc bánh phù hợp đi cùng với bất cứ món cà phê nào!",
+      "price": 29000,
+      "imageUrl": "28.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Sinh tố"
+      ]
+    },
+    {
+      "id": "29",
+      "name": "BÁNH PHÔ MAI CHANH DÂY",
+      "favorite": false,
+      "description": "Vị béo của phô mai cùng với vị chua của chanh dây, tạo nên chiếc bánh thơm ngon hấp dẫn!",
+      "price": 29000,
+      "imageUrl": "29.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Sinh tố"
+      ]
+    },
+    {
+      "id": "30",
+      "name": "BÁNH CARAMEL PHÔ MAI",
+      "favorite": false,
+      "description": "Ngon khó cưỡng! Bánh phô mai thơm béo được phủ bằng lớp caramel ngọt ngào.",
+      "price": 35000,
+      "imageUrl": "30.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Sinh tố"
+      ]
+    },
+    {
+      "id": "31",
+      "name": "LON CÀ PHÊ ĐEN",
+      "favorite": false,
+      "description": "Với thiết kế lon cao tiện dụng, sang trọng và hương vị đặc trưng từ công thức của Highlands. Hương vị thơm ngon hấp dẫn. Sản xuất trên dây chuyền hiện đại. Dùng trực tiếp và ngon hơn khi ướp lạnh.",
+      "price": 66000,
+      "imageUrl": "31.jpg",
+      "cookTime": "5-10",
+      "tags": [
+        "Trà"
+      ]
+    },
+    {
+      "id": "32",
+      "name": "LON CÀ PHÊ SỮA",
+      "favorite": false,
+      "description": "Với thiết kế lon cao tiện dụng, sang trọng và hương vị đặc trưng từ công thức của Highlands đã tạo nên sự ưa chuộng và phổ biến hiện nay. Cà phê sữa đá là sự hòa quyện của cà phê rang đặc trưng, sữa và đá, cùng lớp kem béo ngậy. Highlands Coffee tin tưởng đây sẽ là thức uống ngọt ngào nổi bật trong các loại đồ uống bởi dư âm của nó mang lại. Lon nhỏ 185ml tiện lợi khi mang theo bên mình để có thể sử dụng mọi nơi, mọi lúc. Sản xuất trên dây chuyền hiện đại. Dùng trực tiếp, ngon hơn khi ướp lạnh.",
+      "price": 69000,
+      "imageUrl": "32.jpg",
+      "cookTime": "5-10",
+      "tags": [
+        "Trà"
+      ]
+    },
+    {
+      "id": "33",
+      "name": "CÀ PHÊ HÒA TAN",
+      "favorite": false,
+      "description": "Cà Phê Highlands Coffee 3in1 Hòa Tan túi 50 Gói x 17g Hương vị thơm ngon, đậm đà vị cà phê. Thích hợp cho uống nóng và lạnh. Đường mịn: 40% Bột kem tách bơ: 37% Cà phê hòa tan: 13%, hương liệu tổng hợp Tiện lợi khi sử dụng. Không chỉ dùng trong gia đình mà còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp.",
+      "price": 140000,
+      "imageUrl": "33.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Trà sữa"
+      ]
+    },
+    {
+      "id": "34",
+      "name": "HỘP CÀ PHÊ HOÀ TAN",
+      "favorite": false,
+      "description": "Cà Phê Highlands Coffee 3in1 Hòa Tan hộp 20 Gói x 17g Hương vị thơm ngon, đậm đà vị cà phê. Thích hợp cho uống nóng và lạnh Đường mịn: 40% Bột kem tách bơ: 37% Cà phê hòa tan: 13%, hương liệu tổng hợp Tiện lợi khi sử dụng. Không chỉ dùng trong gia đình mà còn thích hợp làm quà tặng ý nghĩa dành cho người thân, bạn bè và đồng nghiệp.",
+      "price": 58000,
+      "imageUrl": "34.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Trà"
+      ]
+    },
+    {
+      "id": "35",
+      "name": "TRUYỀN THỐNG 1KG",
+      "favorite": false,
+      "description": "Sự kết hợp hài hòa giữa Arabica và Robusta. Vị đậm và ngọt đầy. Là sản phẩm đặc sản của của café Sữa Đá, Café Đá của hệ thống Highlands Coffee. 80% Robusta – 20% Arabica.",
+      "price": 275000,
+      "imageUrl": "35.jpg",
+      "cookTime": "5-7",
+      "tags": [
+        "Trà"
+      ]
+    },
+    {
+      "id": "36",
+      "name": "TRUYỀN THỐNG 200GR",
+      "favorite": false,
+      "description": "Cà phê truyền thống độc quyền của Highlands! Những hạt cà phê Robusta và Arabica thượng hạng trồng ở vùng cao nguyên của Việt Nam được rang và phối trộn theo công thức độc đáo tại Highlands.",
+      "price": 59000,
+      "imageUrl": "36.jpg",
+      "cookTime": "3-5",
+      "tags": [
+        "Nước ép"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "tinhxu",
+      "password": "1234",
+      "name": "Tính Xù",
+      "address": "ở nhà",
+      "phone": "0865390204"
+    },
+    {
+      "id": "2",
+      "username": "kha",
+      "password": "1234",
+      "name": "Kha",
+      "address": "ở nhà Kha",
+      "phone": "0123456789"
+    }
+  ]
 }
