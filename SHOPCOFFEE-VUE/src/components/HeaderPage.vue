@@ -1,6 +1,7 @@
 <template>
-  <header class="no-gutters">
-    <section>
+  <header class="no-gutters fixed-top d-block"
+        style="background-color: #b1282f;z-index: 1000;">
+    <section class=" container">
       <nav
         class="navbar navbar-expand-lg navbar-light text-white"
         style="background-color: #b1282f"
@@ -30,12 +31,9 @@
                 name="search"
                 type="text"
                 placeholder="Tìm Kiếm"
-              />
-              <input
-                class="btn btn-outline-info input-group-text mb-3"
-                type="submit"
-                id="btsearch"
-                value="Tìm Kiếm"
+                v-model="search"
+                @input="updateSearch"
+                style="border-radius: 15px;"
               />
             </form>
           </li>
@@ -48,7 +46,7 @@
                 alt=""
             /></router-link>
           </li>
-          <li class="nav-item mt-3">
+          <li class="nav-item mt-3 text-right">
             <router-link
               to="/login"
               class="btn text-white"
@@ -70,7 +68,7 @@
             <div class="header_action_on">
               <button
                 type="button"
-                class="btn text-white"
+                class="btn text-white text-right"
                 v-if="loggedInUser != null"
               >
                 <b>Xin chào, {{ loggedInUser.name }}</b>
@@ -100,7 +98,7 @@
   <!-- hinh dộng -->
   <div
     id="carouselExampleIndicators"
-    class="carousel slide mb-5"
+    class="carousel slide mb-5 pt-5 mt-4"
     data-ride="carousel"
   >
     <ol class="carousel-indicators">
@@ -166,11 +164,20 @@ import { mapActions } from "vuex";
 export default {
   name: "HeaderPage",
   props: {},
+  data() {
+    return {
+      search: ""
+    }
+  },
   computed: {
     ...mapGetters(["loggedInUser"]),
   },
   methods: {
-    ...mapActions(["logout"]),
+    ...mapActions(["logout","searchAction","getProducts"]),
+    updateSearch() {
+      this.searchAction(this.search)
+      this.getProducts()
+    }
   },
 };
 </script>

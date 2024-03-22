@@ -6,5 +6,7 @@ export default {
         "name": "", 
         "address": "", 
         "phone": ""
-    }
+    },
+    products:[],
+    search: ""
 }

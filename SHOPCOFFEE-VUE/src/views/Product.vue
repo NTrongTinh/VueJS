@@ -38,7 +38,7 @@
           </h5>
 
           <a href="">
-          <span></span></br></a>
+          <span></span></a>
           <button class="btn btn-danger" id="may4" value="lap 4">New</button>
           <h5>Số lượt xem:</h5>
 

@@ -12,15 +12,6 @@ export default {
       throw error;
     }
   },
-  async getProductHome() {
-    try {
-      const response = await axios.get(`${BASE_URL}/products`);
-      return response.data.slice(-8);
-    } catch (error) {
-      console.error('Error fetching produts:', error);
-      throw error;
-    }
-  },
 
   async getProductById(producId) {
     try {
@@ -28,6 +19,25 @@ export default {
       return response.data;
     } catch (error) {
       console.error(`Error fetching user with ID ${producId}:`, error);
+      throw error;
+    }
+  },
+
+  async getAllTopping() {
+    try {
+      const response = await axios.get(`${BASE_URL}/topping`);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      throw error;
+    }
+  },
+  async getAllSize() {
+    try {
+      const response = await axios.get(`${BASE_URL}/size`);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching products:', error);
       throw error;
     }
   },

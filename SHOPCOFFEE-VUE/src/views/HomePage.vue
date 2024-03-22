@@ -1,60 +1,69 @@
 <template>
-
   <!--  -->
 
   <!--Section: Examples-->
-  <section id="examples" class="text-center">
+  <section id="examples" class="text-center slide-top">
     <!-- Heading -->
-    <div class="container">
+    <div class="">
       <div class="mx-auto mt-5">
         <h3 class="mb-3 font-weight-bold" style="color: red">
           SẢN PHẨM MỚI NHẤT
         </h3>
-      </div>
-      <div class="text-right ml-auto mr-5">
-        <a href="/productdetails">
-          <span style="color: gray">Xem chi tiết</span>
-        </a>
       </div>
     </div>
     <!--Grid row-->
     <div class="container">
       <div class="row mt-4 mb-5">
         <!--Grid column-->
-        <template v-for="(item, index) in products" :key="index">
-          <div class="col-lg-3 col-md-4 mb-3 text-left">
-            <a href=""><div class="view overlay z-depth-1-half">
-              <img
-                :src="require(`@/assets/imgCOFFEE/${item.imageUrl}`)"
-                width="250px"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="mask rgba-white-slight"><h5></h5></div>
-            </div>
-            <h5 class="my-4 font-weight-bold" style="color: red">{{ formatNumber(item.price) }}<sup><u>d</u></sup><br/>
-            </h5></a>
-            <a href=""><span>{{ item.name }}</span></a><br>
-            <button class="btn btn-danger" id="may4" value="lap 4">New</button>
-            <h5>Số lượt xem:</h5>
+        <template v-for="(item, index) in filteredProducts" :key="index">
+          <div class="col-md-3 mb-3 text-left">
+            <router-link :to="'/productdetails/' + item.id"
+              ><div class="view overlay z-depth-1-half">
+                <img
+                  :src="require(`@/assets/imgCOFFEE/${item.imageUrl}`)"
+                  width="250px"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="mask rgba-white-slight"><h5>{{ item.name }}</h5></div>
+              </div>
+              <h5 class="my-4 font-weight-bold" style="color: red">{{ formatNumber(item.price) }}<sup><u>d</u></sup>
+                </h5>
+              </router-link>
+            <!-- <button class="btn btn-danger" id="may4" value="lap 4">New</button> -->
+            <h6>🕘: {{ item.cookTime }} phút</h6>
           </div>
         </template>
+        <button type="button" class="btn btn-primary btn-lg mx-auto" style="background-color: brown;">
+          Xem thêm
+        </button>
+        <!-- <button
+          type="button"
+          class="btn btn-primary btn-lg"
+          v-show="indexShow > 8"
+          @click="showLess"
+        >
+          Ẩn bớt
+        </button> -->
+
       </div>
     </div>
     <!--Grid row-->
   </section>
 </template>
 <script>
-import databaseService from "@/databaseService";
+// import databaseService from "@/databaseService";
+// import databaseService from "@/databaseService";
+import { mapActions, mapGetters } from "vuex";
 export default {
   data() {
     return {
-      // Dữ liệu của thành phần Vue
       products: [],
-      newItem: {
-        // Dữ liệu của mục mới
-      },
+      indexShow: 8,
     };
+  },
+  computed: {
+    ...mapGetters(["filteredProducts"]),
   },
   methods: {
     formatNumber(price) {
@@ -64,19 +73,28 @@ export default {
         currency: "VND",
       });
     },
-    // Phương thức để lấy dữ liệu từ API khi thành phần được tạo
-    async getAllProduct() {
-      try {
-        this.products = await databaseService.getAllProducts("products"); // Thay 'items' bằng tên tương ứng với mảng trong db.json
-        this.products = this.products.slice(-8)
-      } catch (error) {
-        console.error("Lỗi khi lấy dữ liệu:", error);
-      }
-      console.log(this.products);
-    },
+    ...mapActions(["getProducts"]),
+    // getProductsHome() {
+    //   this.products = this.filteredProducts;
+    // },
+    // async showMore() {
+    //   this.products = await databaseService.getAllProducts();
+    //   if (this.indexShow < this.products.length) {
+    //     this.indexShow += 8;
+    //   } else {
+    //     this.indexShow = this.products.length;
+    //   }
+    //   this.products = this.products.slice(-this.indexShow).reverse();
+    // },
+    // async showLess() {
+    //   this.products = await databaseService.getAllProducts();
+    //   this.indexShow-=8
+    //   this.products = this.products.slice(-this.indexShow).reverse();
+    // },
   },
   mounted() {
-    this.getAllProduct();
+    this.getProducts();
+    // this.getProductsHome();
   },
 };
 </script>

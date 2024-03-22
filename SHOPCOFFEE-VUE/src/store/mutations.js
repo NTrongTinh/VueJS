@@ -5,7 +5,10 @@ export default {
     clearLoggedInUser(state) {
         state.loggedInUser = null
       },
-      setUser(state, user) {
-        state.user = user
-      }
+    setSearch(state, search) {
+      state.search = search
+    },
+    setProducts(state, products) {
+      state.products = products
+    }
 }

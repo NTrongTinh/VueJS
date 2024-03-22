@@ -433,6 +433,55 @@
       ]
     }
   ],
+  "topping":[
+      {
+          "id": 1,
+          "name": "KEM PHÔ MAIMACCHIATO"
+      },
+      {
+          "id": 2,
+          "name": "HẠT SEN"
+      },
+      {
+          "id": 3,
+          "name": "THẠCH CÀ PHÊ"
+      },
+      {
+          "id": 4,
+          "name": "TRÂN CHÂU TRẮNG"
+      },
+      {
+          "id": 5,
+          "name": "SỐT CARAMEL"
+      },
+      {
+          "id":6,
+          "name": "NHA ĐAM"
+      },
+      {
+          "id":7,
+          "name": "ĐÀO MIẾNG"
+      },
+      {
+          "id":8,
+          "name": "TRÁI VẢI"
+      } 
+  ],
+  "size":
+  [
+      {
+          "id": 1,
+          "name": "S"
+      },
+      {
+          "id": 2,
+          "name": "M"
+      },
+      {
+          "id": 3,
+          "name": "L"
+      }
+  ],
   "users": [
     {
       "id": "1",
