@@ -1,5 +1,5 @@
 <template>
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <div class="container">
     <div class="row text-center">
       <div class="col-12">
@@ -9,7 +9,7 @@
       </div>
     </div>
   </div>
-  <article class="col-12 mb-5 slide-top">
+  <article class="col-12 mb-5">
     <!-- <div class="card"> -->
     <div class="container">
       <!-- <input type="hidden" name="action" value="giohang&add_cart"/> -->
@@ -64,7 +64,6 @@
 
             <strike id="htgiagoc" style="font-size: 20px" hidden></strike>
           </span>
-          <h5 class="colors font-weight-bold"></h5>
           <div style="padding-bottom: 10px; padding-top: 15px; font-size: 15px">
             Size:
           </div>
@@ -74,7 +73,11 @@
                 <label
                   class="btn mr-2 mb-4"
                   :class="
-                    selectedSize === item ? 'btn-info' : 'btn-white border-info'
+                    selectedSize === item ? 
+                    'btn-info active' 
+                    : selectedSize == null ? item.id == 1 
+                    ?'btn-info active':'btn-white border-info'
+                    :'btn-white border-info'
                   "
                   style="width: 140px; height: 44px"
                 >
@@ -86,9 +89,9 @@
                     v-model="selectedSize"
                   />
                   <div style="font-size: 15px; padding-top: 4px">
-                    <div v-if="item.id === 1">S + 0 VNĐ</div>
-                    <div v-if="item.id === 2">M + 6.000 VNĐ</div>
-                    <div v-if="item.id === 3">L + 10.000 VNĐ</div>
+                    <div v-if="item.id == 1">S + 0 VNĐ</div>
+                    <div v-if="item.id == 2">M + 6.000 VNĐ</div>
+                    <div v-if="item.id == 3">L + 10.000 VNĐ</div>
                   </div>
                 </label>
               </span>
@@ -160,15 +163,28 @@
                 <b>Thêm vào giỏ hàng</b>
               </div>
             </button>
-            <h3 v-if="!loggedInUser" class="text-danger">
-              Vui lòng đăng nhập để mua hàng
-            </h3>
+            <button
+              class="add-to-cart btn btn-info mt-3 mr-2"
+              style="height: 50px"
+              type="submit"
+              data-toggle="modal"
+              data-target="#myModal"
+              @click="yeucauLogin()"
+              v-if="!loggedInUser"
+            >
+              <div
+                style="font-size: 15px; padding-right: 4px; padding-left: 4px"
+              >
+                <b>Thêm vào giỏ hàng</b>
+              </div>
+            </button>
           </div>
         </div>
       </div>
     </div>
     <!-- </div> -->
   </article>
+  <meta v-if="check113==true" http-equiv="refresh" content="0;url=/login" />
 </template>
 <script>
 import databaseService from "@/databaseService";
@@ -183,7 +199,8 @@ export default {
       size: [],
       selectedSize: null, //lấy dữ liệu size người dùng chọn
       selectedTopping: [], //lấy dữ liệ Topping người dùng chọn
-      soluongmua: null,
+      soluongmua: 1,
+      check113: false,
       newItem: {
         // Dữ liệu của mục mới
       },
@@ -238,6 +255,12 @@ export default {
       } catch (error) {
         console.error("Lỗi khi lấy dữ liệu:", error);
       }
+    },
+
+    async yeucauLogin()
+    {
+      alert('Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng!');
+      this.check113 = true;
     },
 
     async addToCart() {

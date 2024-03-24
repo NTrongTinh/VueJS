@@ -1,6 +1,6 @@
 
 export default {
-    loggedInUser: state => state.loggedInUser,
+    loggedInUser: state => { return state.loggedInUser} ,
     user: state => state.user,
     products: state => state.products,
     search: state => state.search,

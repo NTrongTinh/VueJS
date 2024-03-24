@@ -101,7 +101,6 @@ import databaseService from '@/databaseService';
             await databaseService.updateCart(id, product)
             const carts = await databaseService.getCart()
             this.cart = carts.filter(product => product.iduser===this.loggedInUser.id)
-            console.log(this.cart);
         } catch (error) {
             console.error("Lỗi lấy dữ liệu giỏ hàng:", error);
             

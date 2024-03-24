@@ -1,29 +1,23 @@
 <template>
   <header class="no-gutters fixed-top d-block"
         style="background-color: #b1282f;z-index: 1000;">
-    <section class=" container">
+    <section>
       <nav
-        class="navbar navbar-expand-lg navbar-light text-white"
+        class="navbar ml-5 navbar-expand-lg navbar-light text-white"
         style="background-color: #b1282f"
       >
         <ul class="navbar-nav">
           <!-- Logo -->
           <li>
-            <router-link to="/"
-              ><img
-                height="75px"
-                class=""
-                src="../assets/imgCOFFEE/White_logo.png"
-                alt=""
-            /></router-link>
+            <a href="/"><img height="75px" class='' src="../assets/imgCOFFEE/White_logo.png" alt=""></a>
           </li>
-
-          <li class="nav-item mt-3">
-            <router-link to="/" class="nav-link text-white" style="font-size: 18px"
-              ><b>Trang chủ</b></router-link
-            >
-          </li>
-
+          <template v-for="(item, index) in loai" :key="index" >
+            <li class="nav-item mt-3">
+              <a :href="'/category/' + item.id" class="nav-link text-white" style="font-size: 18px">
+                <b>{{ item.tenloai }}</b>
+              </a>
+            </li>
+          </template>
           <li class="nav-item mt-3">
             <form class="form-inline my-2 my-lg-0" method="get">
               <input
@@ -43,7 +37,7 @@
                 src="../assets/imgCOFFEE/cartx2.png"
                 width="30px"
                 height="30px"
-                alt="" 
+                alt=""
             /></router-link>
           </li>
           <li class="nav-item mt-3 text-right">
@@ -55,6 +49,16 @@
             >
           </li>
           <li class="nav-item header_action_on mt-3">
+            <!-- <div class="header_action_on"> -->
+            <!-- <button type="button" class="btn text-white"><b>Đăng Nhập</b></button>
+                        <div class="dropdown-menu header_action" style="font-size:18px;width:238px;height:95px;margin-right:100px">
+                            <div class='ml-3 mb-1 header_action' style="font-size:15px">Vui lòng đăng nhập<br>
+                                <button type="button" class="btn btn-info text-white mt-3 "><a href="" class='text-white'><b>Đăng nhập</b></a></button>
+                                <button type="button" class="btn btn-info text-white ml-1 mt-3 "><a href="" class='text-white'><b>Đăng ký</b></a></button>
+                            </div>
+                        </div>
+                    </div> -->
+
             <div class="header_action_on">
               <button
                 type="button"
@@ -88,7 +92,7 @@
   <!-- hinh dộng -->
   <div
     id="carouselExampleIndicators"
-    class="carousel slide mb-5 pt-5 mt-4 slide-top"
+    class="carousel slide mb-5 pt-5 mt-4"
     data-ride="carousel"
   >
     <ol class="carousel-indicators">
@@ -148,6 +152,7 @@
 </template>
 
 <script>
+import databaseService from "@/databaseService";
 // import router from '@/router';
 import { mapGetters } from "vuex";
 import { mapActions } from "vuex";
@@ -156,6 +161,7 @@ export default {
   props: {},
   data() {
     return {
+      loai:[],
       search: ""
     }
   },
@@ -167,7 +173,17 @@ export default {
     updateSearch() {
       this.searchAction(this.search)
       this.getProducts()
-    }
+    },
+    async getAllLoai() {
+      try {
+        this.loai = await databaseService.getAllLoai();// Thay 'items' bằng tên tương ứng với mảng trong db.json
+      } catch (error) {
+        console.error("Lỗi khi lấy dữ liệu:", error);
+      }
+    },
+  },
+  mounted() {
+    this.getAllLoai();
   },
 };
 </script>

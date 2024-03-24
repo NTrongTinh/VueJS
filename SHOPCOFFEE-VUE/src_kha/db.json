@@ -433,6 +433,192 @@
       ]
     }
   ],
+  "users": [
+    {
+      "id": "1",
+      "username": "tinhxu",
+      "password": "1234",
+      "name": "Tính Xù",
+      "address": "ở nhà",
+      "phone": "0865390204"
+    },
+    {
+      "id": "2",
+      "username": "kha",
+      "password": "1234",
+      "name": "Kha",
+      "address": "ở nhà Kha",
+      "phone": "0123456789"
+    }
+  ],
+  "ctloai": [
+    {
+      "id": "1",
+      "maloai": "1"
+    },
+    {
+      "id": "2",
+      "maloai": "1"
+    },
+    {
+      "id": "3",
+      "maloai": "1"
+    },
+    {
+      "id": "4",
+      "maloai": "1"
+    },
+    {
+      "id": "5",
+      "maloai": "1"
+    },
+    {
+      "id": "6",
+      "maloai": "1"
+    },
+    {
+      "id": "7",
+      "maloai": "2"
+    },
+    {
+      "id": "8",
+      "maloai": "2"
+    },
+    {
+      "id": "9",
+      "maloai": "2"
+    },
+    {
+      "id": "10",
+      "maloai": "2"
+    },
+    {
+      "id": "11",
+      "maloai": "2"
+    },
+    {
+      "id": "12",
+      "maloai": "2"
+    },
+    {
+      "id": "13",
+      "maloai": "3"
+    },
+    {
+      "id": "14",
+      "maloai": "3"
+    },
+    {
+      "id": "15",
+      "maloai": "3"
+    },
+    {
+      "id": "16",
+      "maloai": "3"
+    },
+    {
+      "id": "17",
+      "maloai": "3"
+    },
+    {
+      "id": "18",
+      "maloai": "3"
+    },
+    {
+      "id": "19",
+      "maloai": "1"
+    },
+    {
+      "id": "20",
+      "maloai": "1"
+    },
+    {
+      "id": "21",
+      "maloai": "1"
+    },
+    {
+      "id": "22",
+      "maloai": "1"
+    },
+    {
+      "id": "23",
+      "maloai": "1"
+    },
+    {
+      "id": "24",
+      "maloai": "1"
+    },
+    {
+      "id": "25",
+      "maloai": "4"
+    },
+    {
+      "id": "26",
+      "maloai": "4"
+    },
+    {
+      "id": "27",
+      "maloai": "4"
+    },
+    {
+      "id": "28",
+      "maloai": "4"
+    },
+    {
+      "id": "29",
+      "maloai": "4"
+    },
+    {
+      "id": "30",
+      "maloai": "4"
+    },
+    {
+      "id": "31",
+      "maloai": "5"
+    },
+    {
+      "id": "32",
+      "maloai": "5"
+    },
+    {
+      "id": "33",
+      "maloai": "5"
+    },
+    {
+      "id": "34",
+      "maloai": "5"
+    },
+    {
+      "id": "35",
+      "maloai": "5"
+    },
+    {
+      "id": "36",
+      "maloai": "5"
+    }
+  ],
+  "loai": [
+    {
+      "id": "1",
+      "tenloai": "Cà phê"
+    },
+    {
+      "id": "2",
+      "tenloai": "Freeze"
+    },
+    {
+      "id": "3",
+      "tenloai": "Trà"
+    },
+    {
+      "id": "4",
+      "tenloai": "Bánh ngọt"
+    },
+    {
+      "id": "5",
+      "tenloai": "Khác"
+    }
+  ],
   "topping": [
     {
       "id": "1",
@@ -512,80 +698,40 @@
           "price": 10000
         }
       ],
-      "soluongmua": 5,
-      "total": 290000
+      "soluongmua": 3,
+      "total": 204000
     },
     {
-      "id": "a45e",
-      "iduser": "1",
-      "idproduct": "36",
-      "name": "TRUYỀN THỐNG 200GR",
-      "price": 95000,
-      "imageUrl": "36.jpg",
+      "id": "bd92",
+      "iduser": "2",
+      "idproduct": "34",
+      "name": "HỘP CÀ PHÊ HOÀ TAN",
+      "price": 58000,
+      "imageUrl": "34.jpg",
       "size": {
-        "id": 2,
-        "name": "M",
-        "price": 6000
+        "id": 1,
+        "name": "S",
+        "price": 0
       },
       "toppings": [
+        {
+          "id": 1,
+          "name": "KEM PHÔ MAIMACCHIATO",
+          "price": 10000
+        },
         {
           "id": 2,
           "name": "HẠT SEN",
           "price": 10000
         },
         {
-          "id": 1,
-          "name": "KEM PHÔ MAIMACCHIATO",
-          "price": 10000
-        },
-        {
-          "id": 5,
-          "name": "SỐT CARAMEL",
+          "id": 3,
+          "name": "THẠCH CÀ PHÊ",
           "price": 10000
         }
       ],
-      "soluongmua": 2,
-      "total": 190000
-    },
-    {
-      "id": "711e",
-      "iduser": "1",
-      "idproduct": "35",
-      "name": "TRUYỀN THỐNG 1KG",
-      "price": 291000,
-      "imageUrl": "35.jpg",
-      "size": {
-        "id": 2,
-        "name": "M",
-        "price": 6000
-      },
-      "toppings": [
-        {
-          "id": 1,
-          "name": "KEM PHÔ MAIMACCHIATO",
-          "price": 10000
-        }
-      ],
-      "soluongmua": 2,
-      "total": 582000
-    }
-  ],
-  "users": [
-    {
-      "id": "1",
-      "username": "tinhxu",
-      "password": "1234",
-      "name": "Tính Xù",
-      "address": "ở nhà",
-      "phone": "0865390204"
-    },
-    {
-      "id": "2",
-      "username": "kha",
-      "password": "1234",
-      "name": "Kha",
-      "address": "ở nhà Kha",
-      "phone": "0123456789"
+      "soluongmua": 1,
+      "total": 88000
     }
   ]
 }

@@ -1,7 +1,7 @@
 <template>
   <HeaderPage/>
   <div class="container">
-      <router-view class="slide-top"/>
+      <router-view/>
   </div>
   <FooterPage/>
 </template>
@@ -17,6 +17,7 @@
       FooterPage,
     }
   }
+  
 </script>
 
 

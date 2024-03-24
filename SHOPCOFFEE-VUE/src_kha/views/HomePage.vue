@@ -17,18 +17,18 @@
         <!--Grid column-->
         <template v-for="(item, index) in filteredProducts" :key="index">
           <div class="col-md-3 mb-3 text-left">
-            <router-link :to="'/productdetails/' + item.id" exact
-              ><div class="view overlay z-depth-1-half">
+            <router-link :to="'/productdetails/' + item.id">
+              <div class="view overlay z-depth-1-half">
                 <img
                   :src="require(`@/assets/imgCOFFEE/${item.imageUrl}`)"
                   width="250px"
                   class="img-fluid"
                   alt=""
                 />
-                <div class="mask rgba-white-slight"><h5>{{ item.name }}</h5></div>
+                <div class="mask rgba-white-slight mb-2">{{ item.name }}</div>
+                <h5 class="font-weight-bold" style="color: red">{{ formatNumber(item.price) }}</h5>
               </div>
-              <h5 class="my-4 font-weight-bold" style="color: red">{{ formatNumber(item.price) }}<sup><u>d</u></sup>
-                </h5>
+              
               </router-link>
             <!-- <button class="btn btn-danger" id="may4" value="lap 4">New</button> -->
             <h6>🕘: {{ item.cookTime }} phút</h6>
@@ -95,6 +95,7 @@ export default {
   mounted() {
     this.getProducts();
     // this.getProductsHome();
+    window.scrollTo(0, 0);
   },
 };
 </script>

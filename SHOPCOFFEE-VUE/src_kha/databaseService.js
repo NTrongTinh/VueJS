@@ -23,6 +23,16 @@ export default {
     }
   },
 
+  async getLoaiById(id) {
+    try {
+      const response = await axios.get(`${BASE_URL}/loai/${id}`);
+      return response.data;
+    } catch (error) {
+      console.error(`Error fetching user with ID ${id}:`, error);
+      throw error;
+    }
+  },
+
   async getAllTopping() {
     try {
       const response = await axios.get(`${BASE_URL}/topping`);
@@ -32,9 +42,28 @@ export default {
       throw error;
     }
   },
+
   async getAllSize() {
     try {
       const response = await axios.get(`${BASE_URL}/size`);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      throw error;
+    }
+  },
+  async getAllLoai() {
+    try {
+      const response = await axios.get(`${BASE_URL}/loai`);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      throw error;
+    }
+  },
+  async getAllctLoai() {
+    try {
+      const response = await axios.get(`${BASE_URL}/ctloai`);
       return response.data;
     } catch (error) {
       console.error('Error fetching products:', error);
@@ -101,23 +130,12 @@ export default {
       throw error;
     }
   },
-
   // cart
   async getCart() {
     try {
       const response = await axios.get(`${BASE_URL}/cart`);
-      const cart = response.data;
-      return cart;
-    } catch (error) {
-      console.error('Lỗi khi lấy thông tin giỏ hàng:', error);
-      throw error;
-    }
-  },
-  async getCartID(id) {
-    try {
-      const response = await axios.get(`${BASE_URL}/cart/${id}`);
-      const product = response.data;
-      return product;
+      const users = response.data;
+      return users;
     } catch (error) {
       console.error('Lỗi khi lấy thông tin giỏ hàng:', error);
       throw error;
@@ -132,6 +150,7 @@ export default {
       throw error;
     }
   },
+  
   async updateCart(itemID, data) {
     try {
       const response = await axios.put(`${BASE_URL}/cart/${itemID}`, data);
@@ -150,6 +169,4 @@ export default {
       throw error;
     }
   },
-  
-  
 };
